@@ -4,7 +4,7 @@ import yt_dlp
 import os
 import subprocess
 
-TOKEN = "token_here"  # 🔐 
+TOKEN = os.getenv("BOT_TOKEN")
 
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     url = update.message.text.strip()
